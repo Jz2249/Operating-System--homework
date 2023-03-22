@@ -1,0 +1,1 @@
+./conduit --count 4 < /usr/include/lastlog.h

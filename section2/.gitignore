@@ -1,0 +1,18 @@
+# master_repo .gitignore 
+# mchang & jzelenski tweaked Feb 2017, updated for 111 2022
+
+
+# no track compiled python, no anchor, match anywhere
+*.pyc
+
+# don't track these build products, anchored to top-level dir
+/*.d
+/*.o
+/*.a
+.*.swp
+
+# explicitly name project executables here, anchored to top-level dir
+/catn
+
+*~
+

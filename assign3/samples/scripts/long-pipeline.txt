@@ -1,0 +1,1 @@
+/bin/echo abc | ./conduit --count 2 | ./conduit --count 3 | ./conduit --count 5

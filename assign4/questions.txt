@@ -1,0 +1,13 @@
+File: questions.txt
+Author: YOUR NAME HERE
+----------------------
+1)  Thread 1 could be doing some parts of leave_eastbound while thread 2 could be doing some parts of arrive_eastbounds, but this isn't possible in the original implementation.
+
+2)  Two threads may increment crossing_eastbound and crossing_westbound at the same time. If thread 1 is notified to cross westbound and is going to lock westlock, but
+    thread 2 starts to run arrive_eastbounds function which lock the westlock first, then a race condition will happen after thread 2 unlock the westlock because both cross bound values
+    will be incremented.
+3)  Engineers didn't test for certain situation. For example, they didn't test whether the user can edit the command and the machine can function correctly
+    after they typed wrong command in some situations.   
+
+4)  Engineers can do various tests including boundery test, unit test and etc to make sure machine perform correctly in each situation.
+

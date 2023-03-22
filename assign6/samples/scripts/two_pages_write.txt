@@ -1,0 +1,5 @@
+# Create a VMRegion with 2 pages and write to both
+2
+INIT 1 2
+WRITE 1 1
+WRITE 1 0

@@ -1,0 +1,1 @@
+echo 12345 | ./conduit --count 2 | ./conduit --count 3

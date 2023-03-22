@@ -1,0 +1,16 @@
+# Make a VMRegion with 3 pages with pre-existing data, read all of them, and write all of them,  with 3 physical pages 
+3
+INIT 1 3
+STORE 1 0
+STORE 1 1
+STORE 1 2
+
+READ 1 0
+READ 1 1
+READ 1 2
+
+WRITE 1 0
+WRITE 1 1
+WRITE 1 2
+
+CHECK_CLEANUP

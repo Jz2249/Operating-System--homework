@@ -1,0 +1,13 @@
+# Create a VMRegion with 1 read-only page, swap that page to disk, and read it again
+1
+INIT 1 1
+READ 1 0
+# Clock hand sweeps over page 0
+SWEEP 1 0
+# It should be a candidate for removal
+CHECK_SHOULD_REMOVE 1 0
+# Kick it to disk
+REMOVE 1 0
+# Now read it again
+READ 1 0
+CHECK_CLEANUP

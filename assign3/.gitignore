@@ -1,0 +1,22 @@
+# master_repo .gitignore 
+# mchang & jzelenski tweaked Feb 2017 updated for 111 2022
+
+
+# don't track these build products, anchored to top-level dir
+/*.d
+/*.o
+/*.a
+
+# explicitly name project executables here, anchored to top-level dir
+conduit
+sigsegv
+spin
+split
+stsh
+fpe
+stsh-parser/stsh-parse-test
+stsh-parser/parser.cc
+stsh-parser/parser.h
+stsh-parser/parser.output
+stsh-parser/scanner.cc
+

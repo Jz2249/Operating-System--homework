@@ -1,0 +1,13 @@
+# check shouldn't remove if still available ppage
+3
+INIT 1 2
+READ 1 0
+READ 1 1
+
+INIT 2 1
+WRITE 2 0
+
+# It shouldn't remove
+CHECK_SHOULD_REMOVE 1 0
+
+CHECK_CLEANUP

@@ -1,0 +1,2 @@
+./sigsegv 1
+./fpe 1

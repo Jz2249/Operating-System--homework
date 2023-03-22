@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>Alphabet Feeds</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/alphabet.xml</link>
+    </item>
+    <item>
+      <title>Vowels Feed</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/vowels.xml</link>
+    </item>
+    <item>
+      <title>Singleton Feeds</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/singleton.xml</link>
+    </item>
+    <item>
+      <title>A And B Feeds</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/double.xml</link>
+    </item>
+    <item>
+      <title>Consonants Feeds</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/consonants.xml</link>
+    </item>
+    <item>
+      <title>Different URL Same Content Feeds</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/different-urls-same-content.xml</link>
+    </item>
+    <item>
+      <title>Same URL Over and Over Feeds</title>
+      <link>http://web11.stanford.edu/class/cs110/aggregator/feeds/many-of-same.xml</link>
+    </item>
+  </channel>
+</rss>

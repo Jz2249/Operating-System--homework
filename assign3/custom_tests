@@ -1,0 +1,45 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Each custom test is given on a single line using format:
+#
+#     executable  arg(s)
+#
+# The executable is the name of the program to run.
+# The args are optional. If given, they are treated as a sequence of space-separated
+# command-line arguments with which to invoke the executable program.
+#
+# For each custom test, sanity check will invoke your executable program and the
+# solution program (using same command-line arguments), compare the two
+# outputs to verify if they match, and report the outcome.
+#
+# Blank lines and comment lines beginning with # are ignored.
+#
+# Below is an example custom test, you can edit this file to change or add new tests.
+
+stsh < samples/scripts/one-command.txt
+# single command test
+echo "ls -a" | $stsh
+sleep 1 | $stsh
+# two process pipeline test, check if child run in parallel
+stsh < sleep 1 | sleep 1
+# read 12345 from pipe
+stsh < test/two_process2.txt
+# more two process tests in file
+stsh < test/two_process.txt
+
+# Multi-Process Pipelines, check if each child process can communicate within the pipeline
+stsh < test/multi_process1.txt
+# should sleep 3 second
+stsh < sleep 3 | sleep 3 | sleep 3
+# more multi-process tests with more than 3 child in file
+stsh < test/multi_process.txt
+
+# test I/O direction, if the input file is invalid, (e.g.  ss.txt < invalid.txt)
+stsh < test/IOtest.txt
+# I/O direction test with read and write with pipe
+stsh < test/IOtest2.txt
+stsh < test/IOtest3.txt
+stsh < test/IOtest4.txt
+# check if we have multiple segmentation fault
+stsh < test/seg_test.txt

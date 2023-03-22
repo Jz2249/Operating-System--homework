@@ -1,0 +1,1 @@
+test/ss.txt < invalid.txt

@@ -1,0 +1,4 @@
+# Make a VMRegion with 1 page, and read it
+1
+INIT 1 1
+READ 1 0

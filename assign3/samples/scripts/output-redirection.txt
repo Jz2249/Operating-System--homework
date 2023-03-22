@@ -1,0 +1,4 @@
+rm -f simple-redirection-1.txt
+cat /usr/include/lastlog.h > simple-redirection-1.txt
+cat simple-redirection-1.txt
+rm -f simple-redirection-1.txt

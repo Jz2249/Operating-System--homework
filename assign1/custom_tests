@@ -1,0 +1,37 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Each custom test is given on a single line using format:
+#
+#     executable  arg(s)
+#
+# The executable is the name of the program to run.
+# The args are optional. If given, they are treated as a sequence of space-separated
+# command-line arguments with which to invoke the executable program.
+#
+# For each custom test, sanity check will invoke your executable program and the
+# solution program (using same command-line arguments), compare the two
+# outputs to verify if they match, and report the outcome.
+#
+# Blank lines and comment lines beginning with # are ignored.
+#
+# Below is an example custom test, you can edit this file to change or add new tests.
+
+function_tester samples/disk_images/basicDiskImage inode_iget 1
+# test the first block number in large file
+function_tester samples/disk_images/basicDiskImage inode_indexlookup 2 0
+# test the last block number in large file
+function_tester samples/disk_images/basicDiskImage inode_indexlookup 2 784
+# test the last block number in very large file
+function_tester samples/disk_images/basicDiskImage inode_indexlookup 5 14335
+
+# test the last block in very large file with file_getblock function
+function_tester samples/disk_images/basicDiskImage file_getblock 5 14335
+
+# test the path with only root
+function_tester samples/disk_images/basicDiskImage pathname_lookup /
+# test with wrong path
+function_tester samples/disk_images/basicDiskImage pathname_lookup /foo//
+
+
+

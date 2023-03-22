@@ -1,0 +1,7 @@
+# Create a VMRegion with 2 pages and write to both, checking cleanup at end
+2
+INIT 1 2
+WRITE 1 1
+WRITE 1 0
+# Confirm that all vpages are unmapped and ppages freed at end
+CHECK_CLEANUP

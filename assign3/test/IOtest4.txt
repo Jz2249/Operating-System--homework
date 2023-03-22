@@ -1,0 +1,1 @@
+grep void < stsh.cc | wc -l > output.txt

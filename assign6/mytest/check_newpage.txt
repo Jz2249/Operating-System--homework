@@ -1,0 +1,20 @@
+# sweep the second page in VMRegion1, and check if the requested page in VMRegion2 can kick that out
+2
+# VMRegion 1
+INIT 1 2
+STORE 1 0
+STORE 1 1
+# VMRegion 2
+INIT 2 1
+STORE 2 0
+
+
+READ 1 0
+WRITE 1 1
+
+SWEEP 1 1
+
+READ 2 0
+
+
+CHECK_CLEANUP

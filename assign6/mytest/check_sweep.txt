@@ -1,0 +1,10 @@
+# Create a VMRegion with 2 pages, read both, sweep the second one, and that one should then be a candidate for removal
+2
+INIT 1 2
+READ 1 0
+READ 1 1
+# Sweep clock hand over page 1
+SWEEP 1 1
+CHECK_SHOULD_REMOVE 1 1
+CHECK_SHOULD_REMOVE 1 0
+CHECK_CLEANUP

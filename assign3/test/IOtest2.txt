@@ -1,0 +1,2 @@
+echo aeiou > vowels.txt
+cat vowels.txt | ./conduit --count 3 > output.txt

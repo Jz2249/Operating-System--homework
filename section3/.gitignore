@@ -1,0 +1,30 @@
+# master_repo .gitignore 
+# mchang & jzelenski tweaked Feb 2017
+#
+# Ignore patterns should likely start with / to anchor to the top-level
+# dir. If you don't anchor, a pattern like *.o will ignore matching files
+# in subdirs, which can lead to problems.
+# Having accidentally ignored files in starter is no good -- they will
+# not be detected, can get propagated to student repos and then tracked into
+# mercurial, ugh.
+# Having accidentally ignored files in grade/samples is undesirable but
+# not that serious. 
+# We often have symlinks in grade/samples to build products/executables
+# in top-level. Tracking the symlink isn't of much value, but better tham
+# ignoring it altogether.
+
+# no track compiled python, no anchor, match anywhere
+*.pyc
+
+
+# don't track these build products, anchored to top-level dir
+/*.o
+/*.d
+/*.a
+/*_soln
+
+# explicitly name project executables here, anchored to top-level dir
+/publish
+/subprocess-test
+/timeout
+

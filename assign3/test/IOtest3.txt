@@ -1,0 +1,1 @@
+cat < /usr/include/stdio.h > local.h

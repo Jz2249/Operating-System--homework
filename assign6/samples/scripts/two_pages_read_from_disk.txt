@@ -1,0 +1,7 @@
+# Create a VMRegion with 2 pages with existing data on disk, and read both
+2
+INIT 1 2
+STORE 1 0
+STORE 1 1
+READ 1 0
+READ 1 1

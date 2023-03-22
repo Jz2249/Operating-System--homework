@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>New York Times - Home Page</title>
+      <link>https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml</link>
+    </item>
+    <item>
+      <title>Los Angeles Times - National</title>
+      <link>https://www.latimes.com/nation/rss2.0.xml</link>
+    </item>
+    <item>
+      <title>New York Daily News - National</title>
+      <link>https://www.nydailynews.com/arcio/rss/category/news/national/</link>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,9 @@
+# Create a VMRegion with one page and read from it, and sweep over page
+1
+INIT 1 1
+READ 1 0
+# Pretend clock hand swept over this page
+SWEEP 1 0
+# Access it again
+READ 1 0
+CHECK_CLEANUP
